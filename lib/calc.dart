@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'dart:math';
 
 class MainCalc extends StatefulWidget {
@@ -18,7 +17,6 @@ class _MainCalcState extends State<MainCalc> {
   double interestRate = 0;
   double result = 0.0;
   int duration = 0;
-  final player = AudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,7 +131,6 @@ class _MainCalcState extends State<MainCalc> {
       duration = loanTerm;
     });
 
-    // Play a sound (assuming you have the sound player set up)
-    player.play(AssetSource("sounds/bell.wav"));
+    print(result);
   }
 }
